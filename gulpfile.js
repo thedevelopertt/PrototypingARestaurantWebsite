@@ -11,6 +11,8 @@ const browsersync = require("browser-sync").create()
 const puppeteer = require("puppeteer")
 const phpunit = require("gulp-phpunit")
 const axios = require("axios")
+const _size = "gulp-size";
+const size = require(_size);
 
 const {Page,Browser} = puppeteer;
 
@@ -26,6 +28,7 @@ gulp.task("sass",()=>{
         .pipe(sourcemaps.write('.'))
         .pipe(rename("style.css"))
         .pipe(clean_css())
+        .pipe(size())
         .pipe(gulp.dest("./dist/css"))
         .pipe(browsersync.stream())
 })

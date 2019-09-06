@@ -6,21 +6,31 @@
 </head>
 <body>
 
-<section>
+<section class="landing_section">
     <h1><?php echo bloginfo('name') ?></h1>
     <p><?php echo bloginfo('description'); ?></p>
 </section>
 
 <section>
-    <?php while(have_posts()){
-        the_post();
-    ?>
-        <div class="article-preview">
-            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
-            <h2><?php the_title() ?></h2>
-            <p><?php the_excerpt(); ?></p>
-        </div>
-    <?php }?>
+    <div class="article-row">
+	    <?php while(have_posts()){
+		    the_post();
+		    ?>
+            <div class="article-wrapper">
+                <a class="article-preview" href="<?php the_permalink(); ?>">
+                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
+                    <h2><?php the_title() ?></h2>
+                    <p><?php the_excerpt(); ?></p>
+                </a>
+
+                <div class="content">
+				    <?php if(!is_home()){
+					    the_content();
+				    }?>
+                </div>
+            </div>
+	    <?php }?>
+    </div>
 
 </section>
 

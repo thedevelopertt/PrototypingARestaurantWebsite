@@ -1,14 +1,21 @@
 .article-preview{
-  padding: 5rem 0rem;
   h2,p{
     padding: 0rem 1rem;
   }
 
   h2{
-    //padding-top: 5rem;
+    @extend .py-3;
   }
 
   p{
-    //padding-bottom: 5rem;
+    @extend .pb-1;
   }
+}
+
+.article-wrapper{
+  @extend .col-sm-12 , .col-lg-4, .py-5;
+}
+
+.article-row{
+  @extend .row;
 }
