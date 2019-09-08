@@ -1,21 +1,30 @@
-.article-preview{
-  h2,p{
-    padding: 0rem 1rem;
+.article-section{
+  @extend .container;
+
+  .article-row{
+    @extend .row;
+
+    .article-wrapper{
+      @extend .col-12 , .col-lg-4, .py-5;
+
+      .article-preview{
+        h2,p{
+          padding: 0rem 1rem;
+        }
+
+        h2{
+          @extend .py-3;
+        }
+
+        p{
+          @extend .pb-1;
+        }
+      }
+
+    }
+
   }
 
-  h2{
-    @extend .py-3;
-  }
-
-  p{
-    @extend .pb-1;
-  }
 }
 
-.article-wrapper{
-  @extend .col-sm-12 , .col-lg-4, .py-5;
-}
 
-.article-row{
-  @extend .row;
-}

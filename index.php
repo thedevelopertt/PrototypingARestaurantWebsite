@@ -11,7 +11,7 @@
     <p><?php echo bloginfo('description'); ?></p>
 </section>
 
-<section>
+<section class="article-section">
     <div class="article-row">
 	    <?php while(have_posts()){
 		    the_post();
@@ -31,7 +31,6 @@
             </div>
 	    <?php }?>
     </div>
-
 </section>
 
 </body>
