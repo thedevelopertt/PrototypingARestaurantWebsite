@@ -11,4 +11,8 @@ class BlogInformation{
 		return get_bloginfo('description');
 	}
 
+	public function getBlogFaviconUrl(){
+		return get_site_icon_url();
+	}
+
 }
