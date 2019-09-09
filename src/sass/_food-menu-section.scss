@@ -1,0 +1,24 @@
+.food-menu-section{
+  height: 100vh;
+  background-color: #EBE9E6;
+}
+
+.food-menu-row{
+  @extend .row;
+
+  .food-menu-image{
+    @extend .col-12, .col-lg-6, .border;
+  }
+
+  .food-menu-description{
+    @extend .col-12, .col-lg-6;
+
+    h2{
+      @extend .font-weight-bolder;
+    }
+    div{
+      @extend .col-12;
+    }
+  }
+}
+

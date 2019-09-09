@@ -27,27 +27,26 @@
     </div>
 </section>
 
-<section class="article-section">
-    <div class="article-row">
-	    <?php while(have_posts()){
-		    the_post();
-		    ?>
-            <div class="article-wrapper">
-                <a class="article-preview" href="<?php the_permalink(); ?>">
-                    <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>">
-                    <h2><?php the_title() ?></h2>
-                    <p><?php the_excerpt(); ?></p>
-                </a>
+<section class="food-menu-section">
+    <div class="container-fluid">
+        <div class="food-menu-row">
 
-                <div class="content">
-				    <?php if(!is_home()){
-					    the_content();
-				    }?>
+            <div class="food-menu-image">
+                <img src="<?php echo BlogInformation::getImageDirectory() ?>jpg/Website-Menu-Image.jpg" alt="">
+            </div>
+
+            <div class="food-menu-description">
+                <div>
+                    <h2>MENU</h2>
+                </div>
+                <div>
+                    <p>A progression of rare and beautiful ingredients where texture, flavour and harmony is paramount. Delve into the Quay dining experience with Peter Gilmore’s Ten Course Tasting Menu and thoughtfully curated Wine List by Fink Wine Director Amanda Yallop, and Quay Head Sommelier, Shanteh Wong</p>
                 </div>
             </div>
-	    <?php }?>
+        </div>
     </div>
 </section>
+
 
 </body>
 </html>
