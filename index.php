@@ -7,8 +7,6 @@
 <body>
 
 <section class="landing_section">
-    <h1><?php echo bloginfo('name') ?></h1>
-    <p><?php echo bloginfo('description'); ?></p>
 </section>
 
 <section class="article-section">

@@ -16,6 +16,27 @@ const size = require(_size);
 
 const {Page,Browser} = puppeteer;
 
+const _browserSyncProxy = "https://127.0.0.1/";
+let browserSyncProxy = _browserSyncProxy;
+exports.browserSyncProxy = browserSyncProxy;
+
+//createProxyWithPath
+function _createProxyWithPath(path){
+
+    if(path){
+        if(path.charAt(0) == "/"){
+            path = path.slice(1,path.length)
+        }
+
+        return browserSyncProxy+path;
+    }else{
+        return browserSyncProxy;
+    }
+
+}
+const createProxyWithPath = _createProxyWithPath;
+exports.createProxyWithPath = createProxyWithPath;
+//createProxyWithPath
 
 // This task compiles SASS to css with autoprefixer enabled, generates sourcemaps and minifies to the dist/css directory
 gulp.task("sass",()=>{
@@ -87,7 +108,7 @@ exports.initializePuppeteer = initializePuppeteer;
 //createBrowserSync
 async function _createBrowserSync(){
     await browsersync.init({
-        proxy : "https://thedevelopertt.ml",
+        proxy : createProxyWithPath('-development'),
         open: false
     });
 }
@@ -146,10 +167,10 @@ gulp.task("live-edit",async ()=>{
     await createBrowserSync();
     await connectLocalPuppeteer();
 
-    const _browserSyncUrl = "https://localhost:3000";
+    const _browserSyncUrl = "https://localhost:3000/-development/";
     let browserSyncUrl = _browserSyncUrl;
     const _incognitoContext = await createIncognitoContext();
-
+    //
     await createPage(browserSyncUrl,"Galaxy S5",_incognitoContext);
     await createPage(browserSyncUrl,"iPad",_incognitoContext);
     await createPage(browserSyncUrl,undefined,_incognitoContext);

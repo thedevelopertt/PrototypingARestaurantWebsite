@@ -1,4 +1,4 @@
-const {getWebSockDebuggerUrl, initializePuppeteer, connectLocalPuppeteer, createIncognitoContext, createPage} = require("../../gulpfile")
+const {getWebSockDebuggerUrl, initializePuppeteer, connectLocalPuppeteer, createIncognitoContext, createPage, createProxyWithPath, browserSyncProxy} = require("../../gulpfile")
 const _puppeteer = require("puppeteer")
 
 test("Test WebSocket Debugger Url", async () => {
@@ -59,3 +59,13 @@ test('Tests creation of Regular Page takes url and device type returns the Page'
 
     await _instance.close();
 },20000)
+
+test('BrowserSync Url', async () => {
+    const path = createProxyWithPath("/-developer")
+    const result = browserSyncProxy+"-developer";
+    expect(path).toBe(result)
+
+    const path2 = createProxyWithPath("-developer")
+    expect(path).toBe(result);
+    console.log(path, path2);
+})
