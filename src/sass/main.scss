@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+$primary : #002247;
+$font-family-base : Merriweather;
+
+
 //@import "../../node_modules/foundation/scss/foundation";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -14,6 +20,7 @@
 @import "images","colors","article","landing_section";
 
 $enable-responsive-font-sizes : true;
+
 
 body{
   padding: 0;

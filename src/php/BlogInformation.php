@@ -19,8 +19,21 @@ class BlogInformation{
 		return get_template_directory_uri();
 	}
 
+	public static function getImageDirectory(){
+		return self::getTemplateDirectory()."/dist/img/";
+	}
+
 	public static function getSvgPath(){
-		return get_template_directory_uri()."/dist/img/svg/";
+		return self::getImageDirectory()."svg/";
+	}
+
+	public static function getJavascriptDirectory(){
+		return self::getTemplateDirectory()."/dist/js/";
+	}
+
+	public static function scriptFiles(){
+		$allScripts = glob(self::getJavascriptDirectory()."*.js");
+		return $allScripts;
 	}
 
 }

@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="<?php use App\BlogInformation;
 
     echo esc_url(get_template_directory_uri())?>/dist/css/style.css">
+
+    <?php wp_head(); ?>
 </head>
 <body>
 

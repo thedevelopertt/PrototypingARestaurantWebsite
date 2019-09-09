@@ -63,6 +63,17 @@ gulp.task('js_src', () => {
         .pipe(browsersync.stream())
 })
 
+gulp.task('js_lib', () => {
+    return gulp.src([
+        "node_modules/gsap/umd/TimelineMax.js",
+        "node_modules/gsap/umd/TweenMax.js",
+        "node_modules/jquery/dist/jquery.js",
+    ])
+        .pipe(uglify())
+        .pipe(gulp.dest("./dist/js"))
+        .pipe(browsersync.stream())
+})
+
 //This task is called with the gulp keyword
 gulp.task('serve',()=>{
 
@@ -176,4 +187,4 @@ gulp.task("live-edit",async ()=>{
     await createPage(browserSyncUrl,undefined,_incognitoContext);
 })
 
-gulp.task("default",gulp.series("puppeteer","live-edit","sass","js_src","serve"))
+gulp.task("default",gulp.series("puppeteer","live-edit","sass","js_src","js_lib","serve"))

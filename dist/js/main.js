@@ -1,1 +1,1 @@
-function sayHello(){console.log("Hello")}
+function landingAnimation(){new TimelineMax({onComplete:function(){e.resume()},delay:.5}).from("img",1,{opacity:0,easing:Power3.easeOut}).from(".landing-lead > p",.4,{opacity:0,easing:Power3.easeOut}).from(".landing-action",.5,{left:-40,opacity:0,easing:Power3.easeOut});const e=new TimelineMax({paused:!0,repeat:-1,repeatDelay:5})}$(document).ready(landingAnimation);
