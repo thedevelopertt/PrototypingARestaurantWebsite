@@ -3,16 +3,24 @@
 namespace App;
 class BlogInformation{
 
-	public function getBlogName(){
+	public static function getBlogName(){
 		return get_bloginfo('name');
 	}
 
-	public function getBlogDescription(){
+	public static function getBlogDescription(){
 		return get_bloginfo('description');
 	}
 
-	public function getBlogFaviconUrl(){
+	public static function getBlogFaviconUrl(){
 		return get_site_icon_url();
+	}
+
+	public static function getTemplateDirectory(){
+		return get_template_directory_uri();
+	}
+
+	public static function getSvgPath(){
+		return get_template_directory_uri()."/dist/img/svg/";
 	}
 
 }

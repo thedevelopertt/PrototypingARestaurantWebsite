@@ -1,0 +1,39 @@
+.landing_section{
+  h1,p{
+    color: $white;
+  }
+
+  h1{
+    @extend .text-center;
+    //background-image: url("..img/svg/quay-white-svg");
+  }
+
+  .landing-title{
+    @extend .col-12, .col-lg-8, .offset-lg-1;
+    img{
+      @extend .img-fluid;
+    }
+  }
+
+  .landing-lead{
+    @extend .col-12,.col-lg-4;
+
+    .landing-action{
+      a{
+        @extend .btn, .btn-primary;
+      }
+    }
+  }
+
+  .landing-row{
+    @extend .row, .align-items-center, .justify-content-center;
+    min-height: 100vh;
+
+  }
+}
+
+.landing_section{
+  background-image: url("../img/jpg/background-8.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
