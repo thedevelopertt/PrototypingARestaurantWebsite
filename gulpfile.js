@@ -106,27 +106,19 @@ exports.connectLocalPuppeteer = connectLocalPuppeteer;
 //createPuppeteer
 
 //createIncognitoContext
-async function _createIncognitoContext(url, device){
+async function _createIncognitoContext(){
     const browser = await connectLocalPuppeteer();
     const context = await browser.createIncognitoBrowserContext();
-    const page = await context.newPage();
-
-    if(device)
-        await page.emulate(puppeteer.devices[device]);
-
-    if(url)
-        await page.goto(url);
-
-    return page;
+    return context;
 }
 const createIncognitoContext = _createIncognitoContext;
 exports.createIncognitoContext = createIncognitoContext;
 //createIncognitoContext
 
 //createPage
-async function _createPage(url,device){
+async function _createPage(url,device, incognitoContext = undefined){
     const browser = await connectLocalPuppeteer();
-    const page = await browser.newPage()
+    const page = incognitoContext === undefined ? await browser.newPage() : await incognitoContext.newPage();
 
     if(device)
         await page.emulate(puppeteer.devices[device]);
@@ -156,9 +148,11 @@ gulp.task("live-edit",async ()=>{
 
     const _browserSyncUrl = "https://localhost:3000";
     let browserSyncUrl = _browserSyncUrl;
-    const iphone = await createPage(browserSyncUrl,"Galaxy S5");
-    await createPage(browserSyncUrl,"iPad");
-    await createPage(browserSyncUrl);
+    const _incognitoContext = await createIncognitoContext();
+
+    await createPage(browserSyncUrl,"Galaxy S5",_incognitoContext);
+    await createPage(browserSyncUrl,"iPad",_incognitoContext);
+    await createPage(browserSyncUrl,undefined,_incognitoContext);
 })
 
 gulp.task("default",gulp.series("puppeteer","live-edit","sass","js_src","serve"))

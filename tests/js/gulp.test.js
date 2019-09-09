@@ -20,22 +20,28 @@ test('Connects to Local Puppeteer', async () => {
 
 test("Create IncognitoContext with Device Size at Url returns the Page", async () => {
     const _instance = await initializePuppeteer();
-    const page = await createIncognitoContext("https://google.com");
-    expect(page).toBeDefined();
-    await page.close()
-
-    const devicePage = await createIncognitoContext("https://google.com",'iPhone 8')
-    expect(devicePage).toBeDefined();
-    await devicePage.close();
-
-    const undefinedUrlAndDevice = await createIncognitoContext();
-    expect(undefinedUrlAndDevice).toBeDefined();
-    await undefinedUrlAndDevice.close();
-
-    await _instance.close();
+    const _context = await createIncognitoContext();
+    expect(_context).toBeDefined();
 },10000)
 
-test('Tests creation of Page takes url and device type returns the Page', async () => {
+
+test('Test the creation of multiple new Page using incognitoContext', async () => {
+    const _instance = await initializePuppeteer();
+    const _context = await createIncognitoContext();
+
+    const _urlToTest = "https://google.com";
+    let urlToTest = _urlToTest;
+
+    const pageOne = await createPage(urlToTest,'iPhone 8',_context);
+    expect(pageOne).toBeDefined();
+
+    const pageTwo = await createPage(urlToTest,undefined,_context);
+    expect(pageTwo).toBeDefined();
+
+
+})
+
+test('Tests creation of Regular Page takes url and device type returns the Page', async () => {
     const _instance = await initializePuppeteer();
     const page = await createPage("https://google.com");
 
