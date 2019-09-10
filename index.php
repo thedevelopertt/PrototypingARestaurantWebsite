@@ -84,15 +84,15 @@
 
             <div class="events-description">
                 <div>
-                    <h2>PETER GILMORE</h2>
+                    <h2>EVENTS</h2>
                 </div>
 
                 <div>
-                    <p>Peter’s appreciation of nature’s diversity and his endless experimentation in the kitchen and garden are the driving forces in his cooking. Peter leads the Quay team with a focus on excellence, innovation and hospitality.</p>
+                    <p>Celebrate at one of Australia’s most awarded restaurants, with panoramic views encompassing the Sydney Harbour Bridge and Sydney Opera House. From intimate dinner parties in the Private Dining Room, to large cocktail events in The Green Room.</p>
                 </div>
 
                 <div class="events-action">
-                    <a href="#">READ MORE</a>
+                    <a href="#">VIEW EVENTS</a>
                 </div>
             </div>
 

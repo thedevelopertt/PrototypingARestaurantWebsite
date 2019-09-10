@@ -27,7 +27,7 @@
     .landing-action{
       position: relative;
       a{
-        @extend .btn, .btn-primary, .mt-5;
+        @extend .btn, .btn-secondary, .mt-5;
         position: relative;
         border-radius: 0px;
         z-index: 4;
