@@ -71,6 +71,21 @@ function landingAnimation(){
         triggerElement: ".events-section"
     })
 
+    const eventsSectionTween = new TimelineMax();
+
+    eventsSectionTween.from(
+        ".events-description",
+        0.7,
+        {
+            opacity : 0,
+            bottom : -100,
+
+            easing : Power3.easeOut
+        }
+    )
+
+    eventsScene.setTween(eventsSectionTween).addTo(controller);
+
 }
 
 $(document).ready(landingAnimation)
