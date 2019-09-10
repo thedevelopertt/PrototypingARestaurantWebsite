@@ -7,6 +7,9 @@ $font-family-base : 'Open Sans';
 $btn-border-radius : 0px;
 $btn-border-width : 3px;
 $btn-font-weight : bold;
+.list-unstyled{
+  font-weight: normal;
+}
 
 //@import "../../node_modules/foundation/scss/foundation";
 @import "../../node_modules/bootstrap/scss/bootstrap";

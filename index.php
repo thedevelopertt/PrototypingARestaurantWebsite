@@ -237,9 +237,83 @@
 <section class="footer">
     <div class="container-fluid">
         <div class="footer-row">
-            <div class="footer-logo">
-                <img src="<?php echo BlogInformation::getSvgPath(); ?>quay-black5e1f.svg">
+            <div class="col-12">
+                <div class="footer-logo">
+                    <img src="<?php echo BlogInformation::getSvgPath(); ?>quay-black5e1f.svg">
+                </div>
             </div>
+
+            <div class="footer-links">
+                <div class="col-sm-12 col-lg-3">
+                    <div class="footer-sitemap">
+                        <h3>SITEMAP</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Gift Vouchers</a></li>
+                            <li><a href="#">Peter Gilmore</a></li>
+                            <li><a href="#">Meet the Team</a></li>
+                            <li><a href="#">Reservation Policy</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-socials">
+                        <h3>SOCIAL</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-lg-3">
+                    <div class="footer-location">
+                        <h3>LOCATION</h3>
+                        <p>
+                            Upper Level, <br>
+                            Overseas Passenger Terminal,<br>
+                            The Rocks, Sydney 2000 <br>
+                            phone: 02 9251 5600
+                        </p>
+                    </div>
+
+
+                    <div class="footer-hours">
+                        <h3>OPENING HOURS</h3>
+                        <ul class="list-unstyled">
+                            <li>LUNCH SERVICE</li>
+                            <li>Friday, Saturday & Sunday</li>
+                            <li>Bookings from 12pm - 1.30pm</li>
+                            <li>Thursday's in December</li>
+                        </ul>
+
+                        <ul class="list-unstyled">
+                            <li>DINNER SERVICE</li>
+                            <li>Daily: Bookings from 6pm - 9pm</li>
+                        </ul>
+
+                        <ul class="list-unstyled">
+                            <li>EVENTS</li>
+                            <li>Lunch: Monday to Sunday from 12pm</li>
+                            <li>Dinner: Monday to Sunday from 6pm</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-lg-3">
+                    <h3>MAKE A RESERVATION</h3>
+                    <div class="footer-action">
+                        <a href="#">MAKE A RESERVATION</a>
+                    </div>
+                    <p>Tel : 02 9251 5600</p>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 </section>

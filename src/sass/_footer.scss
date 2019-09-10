@@ -1,15 +1,34 @@
 .footer{
   @extend .section-base;
+  min-height: 50vh;
 
   .footer-row{
     @extend .row, .p-5;
 
     .footer-logo{
-      @extend .col-sm-12, .col-lg-4;
+      @extend .col-sm-12, .col-lg-2;
 
       img{
         @extend .img-fluid;
       }
     }
   }
+}
+
+.footer-hours{
+  ul{
+    li:nth-child(1){
+      font-weight: bold;
+    }
+  }
+}
+
+.footer-action{
+  a{
+    @extend .section-action;
+  }
+}
+
+.footer-links{
+  @extend .row, .w-100, .py-5;
 }
