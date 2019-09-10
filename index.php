@@ -75,6 +75,31 @@
     </div>
 </section>
 
+<section class="events-section">
+    <div class="container-fluid">
+        <div class="events-row">
+
+            <div class="events-image">
+            </div>
+
+            <div class="events-description">
+                <div>
+                    <h2>PETER GILMORE</h2>
+                </div>
+
+                <div>
+                    <p>Peter’s appreciation of nature’s diversity and his endless experimentation in the kitchen and garden are the driving forces in his cooking. Peter leads the Quay team with a focus on excellence, innovation and hospitality.</p>
+                </div>
+
+                <div class="events-action">
+                    <a href="#">READ MORE</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 </body>
 </html>

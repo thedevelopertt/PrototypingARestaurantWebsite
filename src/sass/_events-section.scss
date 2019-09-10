@@ -1,0 +1,21 @@
+.events-section{
+  @extend .section-base;
+
+  .events-row{
+    @extend .section-row;
+
+    .events-image{
+      @extend .section-image-order-1;
+    }
+
+    .events-description {
+      @extend .section-description-order-2;
+    }
+
+    .events-action {
+      a {
+        @extend .section-action;
+      }
+    }
+  }
+}

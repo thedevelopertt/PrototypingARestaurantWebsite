@@ -16,7 +16,7 @@ const size = require(_size);
 
 const {Page,Browser} = puppeteer;
 
-const _browserSyncProxy = "https://127.0.0.1/";
+const _browserSyncProxy = "http://127.0.0.1/";
 let browserSyncProxy = _browserSyncProxy;
 exports.browserSyncProxy = browserSyncProxy;
 
@@ -178,7 +178,7 @@ gulp.task("live-edit",async ()=>{
     await createBrowserSync();
     await connectLocalPuppeteer();
 
-    const _browserSyncUrl = "https://localhost:3000/-development/";
+    const _browserSyncUrl = "http://localhost:3000/-development/";
     let browserSyncUrl = _browserSyncUrl;
     const _incognitoContext = await createIncognitoContext();
     //
