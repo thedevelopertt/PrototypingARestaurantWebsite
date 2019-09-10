@@ -32,7 +32,6 @@
         <div class="food-menu-row">
 
             <div class="food-menu-image">
-                <img src="<?php echo BlogInformation::getImageDirectory() ?>jpg/Website-Menu-Image.jpg" alt="">
             </div>
 
             <div class="food-menu-description">
@@ -41,6 +40,10 @@
                 </div>
                 <div>
                     <p>A progression of rare and beautiful ingredients where texture, flavour and harmony is paramount. Delve into the Quay dining experience with Peter Gilmore’s Ten Course Tasting Menu and thoughtfully curated Wine List by Fink Wine Director Amanda Yallop, and Quay Head Sommelier, Shanteh Wong</p>
+                </div>
+
+                <div class="food-menu-action">
+                    <a href="#">Read More</a>
                 </div>
             </div>
         </div>
