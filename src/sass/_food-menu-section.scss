@@ -17,7 +17,7 @@
     @extend .col-sm-12, .col-lg-6, .pt-5;
 
     h2{
-      @extend .font-weight-bolder;
+      @extend .font-weight-bolder, .display-4;
     }
     div{
       @extend .col-12;
