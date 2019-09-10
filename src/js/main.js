@@ -32,29 +32,44 @@ function landingAnimation(){
             }
         )
 
-    const buttonTimeline = new TimelineMax({
-        paused : true,
-        repeat : -1,
-        repeatDelay: 5
+    const foodMenuTimeLine = new TimelineMax({});
+    foodMenuTimeLine.from(
+        ".food-menu-description",
+        0.7,
+        {
+            opacity : 0,
+            bottom : -100,
+            easing : Power3.easeOut
+        }
+    )
+
+    const controller = new ScrollMagic.Controller();
+    const foodMenuScene = new ScrollMagic.Scene({
+        triggerElement : ".food-menu-section",
+    })
+        .setTween(foodMenuTimeLine)
+        .addTo(controller)
+
+    const aboutScene = new ScrollMagic.Scene({
+        triggerElement : ".about-section"
     })
 
-    // const landingAction = $(".landing-action > a")
-    // const _h = landingAction.height();
-    // const _w = landingAction.width();
-    // const btnShadow = $(".btn-shadow");
-    // btnShadow.height(_h);
-    // btnShadow.width(_w);
+    const aboutSectionTween = new TimelineMax({});
+    aboutSectionTween.from(
+        ".about-description",
+        0.7,
+        {
+            opacity : 0,
+            bottom : -100,
+            easing : Power3.easeOut
+        }
+    )
 
-    // buttonTimeline.to(
-    //     btnShadow,
-    //     0.6,
-    //     {
-    //         "left" : 20,
-    //         "top" : 10,
-    //         "opacity" : 0,
-    //         easing : Linear.easeInOut
-    //     }
-    // )
+    aboutScene.setTween(aboutSectionTween).addTo(controller);
+
+    const eventsScene = new ScrollMagic.Scene({
+        triggerElement: ".events-section"
+    })
 
 }
 

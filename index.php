@@ -275,7 +275,7 @@
                             Upper Level, <br>
                             Overseas Passenger Terminal,<br>
                             The Rocks, Sydney 2000 <br>
-                            phone: 02 9251 5600
+                            Phone: 02 9251 5600
                         </p>
                     </div>
 
@@ -303,7 +303,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-lg-3">
+                <div class="col-sm-12 col-lg-6">
                     <h3>MAKE A RESERVATION</h3>
                     <div class="footer-action">
                         <a href="#">MAKE A RESERVATION</a>

@@ -68,6 +68,9 @@ gulp.task('js_lib', () => {
         "node_modules/gsap/umd/TimelineMax.js",
         "node_modules/gsap/umd/TweenMax.js",
         "node_modules/jquery/dist/jquery.js",
+        "node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
+        "node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js",
+        "node_modules/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js",
     ])
         .pipe(uglify())
         .pipe(gulp.dest("./dist/js"))

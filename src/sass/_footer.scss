@@ -3,7 +3,7 @@
   min-height: 50vh;
 
   .footer-row{
-    @extend .row, .p-5;
+    @extend .row, .py-5, .px-3, .px-lg-5;
 
     .footer-logo{
       @extend .col-sm-12, .col-lg-2;
