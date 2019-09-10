@@ -230,7 +230,16 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
 
+<section class="footer">
+    <div class="container-fluid">
+        <div class="footer-row">
+            <div class="footer-logo">
+                <img src="<?php echo BlogInformation::getSvgPath(); ?>quay-black5e1f.svg">
+            </div>
         </div>
     </div>
 </section>

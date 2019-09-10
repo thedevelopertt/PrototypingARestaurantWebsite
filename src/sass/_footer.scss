@@ -1,0 +1,15 @@
+.footer{
+  @extend .section-base;
+
+  .footer-row{
+    @extend .row, .p-5;
+
+    .footer-logo{
+      @extend .col-sm-12, .col-lg-4;
+
+      img{
+        @extend .img-fluid;
+      }
+    }
+  }
+}
