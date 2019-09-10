@@ -1,7 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 $primary : #002247;
-$font-family-base : Merriweather;
+$font-weight-base : bold;
+$font-family-base : 'Open Sans';
 $btn-border-radius : 0px;
 
 //@import "../../node_modules/foundation/scss/foundation";
@@ -21,6 +22,9 @@ $btn-border-radius : 0px;
 
 $enable-responsive-font-sizes : true;
 
+.btn{
+  @extend .px-5;
+}
 
 body{
   padding: 0;
