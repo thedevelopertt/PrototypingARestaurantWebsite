@@ -105,6 +105,7 @@
         <div class="info-row">
 
             <div class="info-block">
+                <div class="info-overlay"></div>
                 <div class="info-block-row">
                     <div class="info-title">
                         <h3>AWARDS</h3>
@@ -125,6 +126,7 @@
             </div>
 
             <div class="info-block">
+                <div class="info-overlay"></div>
                 <div class="info-block-row">
                     <div class="info-title">
                         <h3>FESTIVE SEASON</h3>
@@ -145,6 +147,7 @@
             </div>
 
             <div class="info-block">
+                <div class="info-overlay"></div>
                 <div class="info-block-row">
                     <div class="info-title">
                         <h3>SPECIAL EVENT</h3>
@@ -165,6 +168,7 @@
             </div>
 
             <div class="info-block">
+                <div class="info-overlay"></div>
                 <div class="info-block-row">
                     <div class="info-title">
                         <h3>SPECIAL EVENT</h3>
@@ -185,6 +189,7 @@
             </div>
 
             <div class="info-block">
+                <div class="info-overlay"></div>
                 <div class="info-block-row">
                     <div class="info-title">
                         <h3>SPECIAL EVENT</h3>
@@ -205,6 +210,7 @@
             </div>
 
             <div class="info-block">
+                <div class="info-overlay"></div>
                 <div class="info-block-row">
                     <div class="info-title">
                         <h3>MORE INFO</h3>
