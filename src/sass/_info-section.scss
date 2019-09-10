@@ -67,7 +67,8 @@
       @extend .col-12;
       width: 100%;
       a{
-        @extend .btn, .btn-info;
+        @extend .btn, .btn-outline-info;
+        border-width: 3px;
       }
     }
   }
