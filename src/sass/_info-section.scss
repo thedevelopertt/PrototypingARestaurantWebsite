@@ -1,0 +1,40 @@
+.info-section{
+  @extend .section-base;
+
+  .info-row{
+    @extend .row;
+  }
+
+  .info-block{
+    @extend .col-sm-12, .col-lg-4, .p-5;
+    background-color: $black;
+    color : $white;
+
+    .info-block-row{
+      @extend .row, .align-items-start;
+      min-height: 50vh;
+    }
+
+    .info-title{
+      @extend .border-bottom, .col-12;
+    }
+
+    .info-large-title{
+      @extend .py-3, .col-12;
+    }
+
+    .info-lead{
+      @extend .col-12;
+    }
+
+
+    .info-action{
+      @extend .col-12;
+      width: 100%;
+      a{
+        @extend .btn, .btn-outline-info;
+      }
+    }
+  }
+}
+

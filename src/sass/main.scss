@@ -19,7 +19,9 @@ $btn-border-radius : 0px;
 //@import "../../node_modules/bootstrap/scss/images";
 //@import "../../node_modules/bootstrap/scss/reboot";
 
-@import "images","colors","article","landing_section", "food-menu-section","about-section", "events-section";
+@import "images","colors","article","landing_section",
+"food-menu-section","about-section", "events-section",
+"info-section";
 
 $enable-responsive-font-sizes : true;
 
